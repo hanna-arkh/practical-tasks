@@ -26,7 +26,7 @@ export default function Post() {
         </View>
         <View>
           <Image
-            source={require("../assets/priroda.jpg")}
+            source={require("../assets/priroda.png")}
             resizeMode="cover"
             style={styles.mainPic}
           />
