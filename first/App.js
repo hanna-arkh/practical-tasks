@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import Post from "./components/Post";
+import Orientation from "./components/Orientation";
 
 export default function App() {
   return (

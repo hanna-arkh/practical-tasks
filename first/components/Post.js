@@ -6,9 +6,11 @@ import {
   View,
   Text,
   StyleSheet,
+  PixelRatio,
 } from "react-native";
 
 export default function Post() {
+  const pixels = PixelRatio.get();
   return (
     <SafeAreaView>
       <ScrollView style={styles.container}>
@@ -18,7 +20,9 @@ export default function Post() {
             style={styles.icons}
             resizeMode="contain"
           />
-          <Text style={styles.name}>name_surname</Text>
+          <Text style={[{ fontSize: pixels * 6 }, styles.name]}>
+            name_surname
+          </Text>
         </View>
         <View>
           <Image
