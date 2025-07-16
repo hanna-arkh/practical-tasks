@@ -1,19 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
-import Post from "./components/Post";
+import { View } from 'react-native'
+import Post from './components/Post'
+import { styles } from './styles/styles'
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.containerApp}>
       <Post />
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
