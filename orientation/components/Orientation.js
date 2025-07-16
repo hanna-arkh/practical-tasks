@@ -4,13 +4,20 @@ import { styles, textStyle, direction } from '../styles/styles'
 export default function Orientation() {
   const { width, height } = useWindowDimensions()
   const isPortrait = height >= width
+  const textItems = [
+    'Lorem ipsum dolor sit amet',
+    'Nunc malesuada sagittis feugiat',
+    'Morbi ipsum tellus, dictum ac lorem vel',
+    'blandit porttitor mauris',
+    'sagittis feugiat',
+  ]
   return (
     <SafeAreaView style={[direction(isPortrait), styles.text]}>
-      <Text style={textStyle(isPortrait)}>Lorem ipsum dolor sit amet</Text>
-      <Text style={textStyle(isPortrait)}>Nunc malesuada sagittis feugiat</Text>
-      <Text style={textStyle(isPortrait)}>Morbi ipsum tellus, dictum ac lorem vel</Text>
-      <Text style={textStyle(isPortrait)}>blandit porttitor mauris</Text>
-      <Text style={textStyle(isPortrait)}>sagittis feugiat</Text>
+      {textItems.map((text, index) => (
+        <Text key={index} style={textStyle(isPortrait)}>
+          {text}
+        </Text>
+      ))}
     </SafeAreaView>
   )
 }
