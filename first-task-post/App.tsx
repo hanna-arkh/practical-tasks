@@ -1,5 +1,5 @@
 import { View } from 'react-native'
-import Post from './components/Post'
+import { Post } from './components/Post'
 import { styles } from './styles/styles'
 
 export default function App() {

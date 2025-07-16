@@ -7,7 +7,7 @@ import LIKE_PATH from '../assets/like.png'
 import COMMENT_PATH from '../assets/comment.png'
 import SAVE_PATH from '../assets/save.png'
 
-export default function Post() {
+export const Post = () => {
   const pixels = PixelRatio.get()
   return (
     <SafeAreaView>
