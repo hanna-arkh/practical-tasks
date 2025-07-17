@@ -1,10 +1,9 @@
 import { SafeAreaView, Text } from 'react-native'
 
-const SettingsScreen = () => {
-  return (
-    <SafeAreaView>
-      <Text>Settings Screen</Text>
-    </SafeAreaView>
-  )
-}
+const SettingsScreen = () => (
+  <SafeAreaView>
+    <Text>Settings Screen</Text>
+  </SafeAreaView>
+)
+
 export default SettingsScreen
