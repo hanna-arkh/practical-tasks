@@ -6,17 +6,22 @@ import { iconNames, screenNames } from '../constants/constants'
 
 const Tab = createBottomTabNavigator()
 export default function BottomTab() {
+  const getIconName = (route, focused) => {
+    switch (route.name) {
+      case screenNames.feed:
+        return focused ? iconNames.listFocused : iconNames.listUnfocused
+      case screenNames.saved:
+        return focused ? iconNames.bookmarkFocused : iconNames.bookmarkUnfocused
+      default:
+        return iconNames.helpIcon
+    }
+  }
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarIcon: ({ color, size, focused }) => {
-          let iconName
-          if (route.name === screenNames.feed) {
-            iconName = focused ? iconNames.listFocused : iconNames.listUnfocused
-          } else if (route.name === screenNames.saved) {
-            iconName = focused ? iconNames.bookmarkFocused : iconNames.bookmarkUnfocused
-          }
+          const iconName = getIconName(route, focused)
           return <Ionicons name={iconName} size={size} color={color} />
         },
       })}
