@@ -23,8 +23,8 @@ export const BottomTab = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, focused, size }) => {
-          const iconName = getTabBarIconName(route, focused)
-          return <Ionicons name={iconName} size={size} color={color} />
+          const tabBarIconName = getTabBarIconName(route, focused)
+          return <Ionicons name={tabBarIconName} size={size} color={color} />
         },
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'grey',
