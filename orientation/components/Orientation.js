@@ -2,7 +2,7 @@ import { Text, SafeAreaView } from 'react-native'
 import { styles, textStyle, direction } from '../styles/styles'
 import { useOrientation } from '../hooks/useOrientation'
 
-export default function Orientation() {
+export const Orientation = () => {
   const { isPortrait } = useOrientation()
 
   const textItems = [
