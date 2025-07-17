@@ -7,7 +7,7 @@ import { SCREEN_NAMES, ICON_NAMES } from '../constants/constants'
 
 const Tab = createBottomTabNavigator()
 export const BottomTab = () => {
-  const getIconName = (route, focused) => {
+  const getTabBarIconName = (route, focused) => {
     switch (route.name) {
       case SCREEN_NAMES.feed:
         return focused ? ICON_NAMES.homeFocused : ICON_NAMES.homeUnfocused
@@ -23,7 +23,7 @@ export const BottomTab = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, focused, size }) => {
-          const iconName = getIconName(route, focused)
+          const iconName = getTabBarIconName(route, focused)
           return <Ionicons name={iconName} size={size} color={color} />
         },
         tabBarActiveTintColor: 'tomato',
