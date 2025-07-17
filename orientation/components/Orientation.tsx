@@ -5,7 +5,7 @@ import { useOrientation } from '../hooks/useOrientation'
 export const Orientation = () => {
   const { isPortrait } = useOrientation()
 
-  const textItems = [
+  const textItems: string[] = [
     'Lorem ipsum dolor sit amet',
     'Nunc malesuada sagittis feugiat',
     'Morbi ipsum tellus, dictum ac lorem vel',
@@ -14,7 +14,7 @@ export const Orientation = () => {
   ]
   return (
     <SafeAreaView style={[direction(isPortrait), styles.text]}>
-      {textItems.map((text, index) => (
+      {textItems.map((text: string, index: number) => (
         <Text key={index} style={textStyle(isPortrait)}>
           {text}
         </Text>

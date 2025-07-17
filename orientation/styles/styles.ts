@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { COLORS } from '../constants/colors'
 
 export const styles = StyleSheet.create({
@@ -13,10 +13,10 @@ export const styles = StyleSheet.create({
   },
 })
 
-export const textStyle = isPortrait => ({
+export const textStyle = (isPortrait: boolean): TextStyle => ({
   fontSize: isPortrait ? 8 : 18,
 })
 
-export const direction = isPortrait => ({
+export const direction = (isPortrait: boolean): ViewStyle => ({
   flexDirection: isPortrait ? 'column' : 'row',
 })
