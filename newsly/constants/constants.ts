@@ -1,4 +1,4 @@
-export const iconNames = {
+export const ICON_NAME = {
   listFocused: 'list',
   listUnfocused: 'list-outline',
   bookmarkFocused: 'bookmark',
@@ -6,7 +6,7 @@ export const iconNames = {
   helpIcon: 'help-circle',
 }
 
-export const screenNames = {
+export const SCREEN_NAMES = {
   feed: 'Feed',
   saved: 'Saved',
 }

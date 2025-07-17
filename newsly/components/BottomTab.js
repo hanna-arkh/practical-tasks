@@ -2,18 +2,18 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Feed from './Feed'
 import Saved from './Saved'
 import { Ionicons } from '@expo/vector-icons'
-import { iconNames, screenNames } from '../constants/constants'
+import { ICON_NAME, SCREEN_NAMES } from '../constants/constants'
 
 const Tab = createBottomTabNavigator()
 const BottomTab = () => {
   const getIconName = (route, focused) => {
     switch (route.name) {
-      case screenNames.feed:
-        return focused ? iconNames.listFocused : iconNames.listUnfocused
-      case screenNames.saved:
-        return focused ? iconNames.bookmarkFocused : iconNames.bookmarkUnfocused
+      case SCREEN_NAMES.feed:
+        return focused ? ICON_NAME.listFocused : ICON_NAME.listUnfocused
+      case SCREEN_NAMES.saved:
+        return focused ? ICON_NAME.bookmarkFocused : ICON_NAME.bookmarkUnfocused
       default:
-        return iconNames.helpIcon
+        return ICON_NAME.helpIcon
     }
   }
   return (
@@ -26,8 +26,8 @@ const BottomTab = () => {
         },
       })}
     >
-      <Tab.Screen name={screenNames.feed} component={Feed} />
-      <Tab.Screen name={screenNames.saved} component={Saved} />
+      <Tab.Screen name={SCREEN_NAMES.feed} component={Feed} />
+      <Tab.Screen name={SCREEN_NAMES.saved} component={Saved} />
     </Tab.Navigator>
   )
 }
