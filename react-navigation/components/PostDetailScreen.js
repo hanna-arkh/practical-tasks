@@ -1,10 +1,12 @@
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text } from 'react-native'
 
-export default function PostDetailScreen({ route }) {
-  const { id } = route.params;
+const PostDetailScreen = ({ route }) => {
+  const { id } = route.params
   return (
     <SafeAreaView>
       <Text>Post Detail Screen</Text>
     </SafeAreaView>
-  );
+  )
 }
+
+export default PostDetailScreen

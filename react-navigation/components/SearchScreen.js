@@ -1,9 +1,10 @@
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text } from 'react-native'
 
-export default function SearchScreen() {
+const SearchScreen = () => {
   return (
     <SafeAreaView>
       <Text>Search</Text>
     </SafeAreaView>
-  );
+  )
 }
+export default SearchScreen

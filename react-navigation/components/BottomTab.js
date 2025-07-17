@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { screenNames, iconNames } from '../constants/constants'
 
 const Tab = createBottomTabNavigator()
-export default function BottomTab() {
+export const BottomTab = () => {
   const getIconName = (route, focused) => {
     switch (route.name) {
       case screenNames.feed:

@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView, Button, Text } from 'react-native'
 
-export default function FeedScreen() {
+export const FeedScreen = () => {
   const navigation = useNavigation()
   const postId = 32
   return (
