@@ -1,10 +1,10 @@
-import { Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Text, View, StyleSheet, useWindowDimensions } from 'react-native'
 
-export default function NewsDetails({ route }) {
-  const { article } = route.params;
-  const { width, height } = useWindowDimensions();
-  const isTablet = width > 768;
-  const isLandscape = width > height;
+const NewsDetails = ({ route }) => {
+  const { article } = route.params
+  const { width, height } = useWindowDimensions()
+  const isTablet = width > 768
+  const isLandscape = width > height
 
   return (
     <View
@@ -14,18 +14,12 @@ export default function NewsDetails({ route }) {
         isTablet ? styles.tablet : styles.phone,
       ]}
     >
-      <Text style={[styles.textItem, styles.articleTitle]}>
-        {article.title}
-      </Text>
+      <Text style={[styles.textItem, styles.articleTitle]}>{article.title}</Text>
       <Text style={[styles.textItem, styles.content]}>{article.content}</Text>
-      <Text style={[styles.textItem, styles.info]}>
-        Category: {article.category}
-      </Text>
-      <Text style={[styles.textItem, styles.info]}>
-        Author: {article.author}
-      </Text>
+      <Text style={[styles.textItem, styles.info]}>Category: {article.category}</Text>
+      <Text style={[styles.textItem, styles.info]}>Author: {article.author}</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -38,14 +32,15 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   articleTitle: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 20,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   content: {
     fontSize: 20,
   },
   info: {
-    alignSelf: "flex-end",
+    alignSelf: 'flex-end',
   },
-});
+})
+export default NewsDetails

@@ -1,4 +1,4 @@
-import { articles } from "../data";
+import { articles } from '../data'
 import {
   FlatList,
   View,
@@ -6,12 +6,12 @@ import {
   Text,
   useWindowDimensions,
   StyleSheet,
-} from "react-native";
+} from 'react-native'
 
-export default function SavedScreen({ navigation }) {
-  const { width, height } = useWindowDimensions();
-  const isTablet = width >= 768;
-  const isLandscape = height > width;
+const SavedScreen = ({ navigation }) => {
+  const { width, height } = useWindowDimensions()
+  const isTablet = width >= 768
+  const isLandscape = height > width
 
   return (
     <View
@@ -23,13 +23,9 @@ export default function SavedScreen({ navigation }) {
     >
       <FlatList
         data={articles}
-        keyExtractor={(item) => item.id}
+        keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("News Details", { article: item })
-            }
-          >
+          <TouchableOpacity onPress={() => navigation.navigate('News Details', { article: item })}>
             <Text style={styles.item}>
               {item.id}. {item.title}
             </Text>
@@ -37,7 +33,7 @@ export default function SavedScreen({ navigation }) {
         )}
       />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -46,13 +42,13 @@ const styles = StyleSheet.create({
   },
   portrait: {
     padding: 10,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
   },
   landscape: {
     paddingHorizontal: 32,
     paddingVertical: 16,
-    backgroundColor: "#ffffff",
-    flexDirection: "row",
+    backgroundColor: '#ffffff',
+    flexDirection: 'row',
   },
   phone: {
     paddingHorizontal: 20,
@@ -64,8 +60,9 @@ const styles = StyleSheet.create({
   item: {
     marginBottom: 12,
     padding: 16,
-    backgroundColor: "#eeeeee",
+    backgroundColor: '#eeeeee',
     borderRadius: 8,
     fontSize: 16,
   },
-});
+})
+export default SavedScreen
