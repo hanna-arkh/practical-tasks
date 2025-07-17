@@ -9,4 +9,7 @@ export const ICON_NAME = {
 export const SCREEN_NAMES = {
   feed: 'Feed',
   saved: 'Saved',
+  feedScreen: 'Feed Screen',
+  newsDetails: 'News Details',
+  savedScreen: 'Saved Screen',
 }
