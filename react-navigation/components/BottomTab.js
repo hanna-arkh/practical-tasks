@@ -3,19 +3,20 @@ import FeedStack from './FeedStack'
 import ProfileStack from './ProfileStack'
 import SearchScreen from './SearchScreen'
 import { Ionicons } from '@expo/vector-icons'
+import { screenNames, iconNames } from '../constants/constants'
 
 const Tab = createBottomTabNavigator()
 export default function BottomTab() {
   const getIconName = (route, focused) => {
     switch (route.name) {
-      case 'Feed':
-        return focused ? 'home' : 'home-outline'
-      case 'Search':
-        return focused ? 'search' : 'search-outline'
-      case 'Profile':
-        return focused ? 'person' : 'person-outline'
+      case screenNames.feed:
+        return focused ? iconNames.homeFocused : iconNames.homeUnfocused
+      case screenNames.search:
+        return focused ? iconNames.searchFocused : iconNames.searchUnfocused
+      case screenNames.profile:
+        return focused ? iconNames.profileFocused : iconNames.profileUnfocused
       default:
-        return 'help-circle'
+        return iconNames.helpIcon
     }
   }
   return (
@@ -29,9 +30,13 @@ export default function BottomTab() {
         tabBarInactiveTintColor: 'grey',
       })}
     >
-      <Tab.Screen name="Feed" component={FeedStack} options={{ headerShown: false }} />
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Profile" component={ProfileStack} options={{ headerShown: false }} />
+      <Tab.Screen name={screenNames.feed} component={FeedStack} options={{ headerShown: false }} />
+      <Tab.Screen name={screenNames.search} component={SearchScreen} />
+      <Tab.Screen
+        name={screenNames.profile}
+        component={ProfileStack}
+        options={{ headerShown: false }}
+      />
     </Tab.Navigator>
   )
 }
