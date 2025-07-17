@@ -2,6 +2,9 @@ export const SCREEN_NAMES = {
   feed: 'Feed',
   search: 'Search',
   profile: 'Profile',
+  settings: 'Settings Screen',
+  feedScreen: 'Feed Screen',
+  postDetail: 'Post Detail',
 }
 
 export const ICON_NAMES = {
