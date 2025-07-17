@@ -1,9 +1,10 @@
-import { useWindowDimensions, Text, SafeAreaView } from 'react-native'
+import { Text, SafeAreaView } from 'react-native'
 import { styles, textStyle, direction } from '../styles/styles'
+import { useOrientation } from '../hooks/useOrientation'
 
 export default function Orientation() {
-  const { width, height } = useWindowDimensions()
-  const isPortrait = height >= width
+  const { isPortrait } = useOrientation()
+
   const textItems = [
     'Lorem ipsum dolor sit amet',
     'Nunc malesuada sagittis feugiat',
