@@ -7,11 +7,12 @@ import {
   useWindowDimensions,
   StyleSheet,
 } from 'react-native'
+import DeviceInfo from 'react-native-device-info'
 
 const FeedScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
-  const isTablet = width >= 768
   const isLandscape = height > width
+  const isTablet = DeviceInfo.isTablet()
 
   return (
     <View

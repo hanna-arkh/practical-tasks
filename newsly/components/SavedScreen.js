@@ -7,10 +7,11 @@ import {
   useWindowDimensions,
   StyleSheet,
 } from 'react-native'
+import DeviceInfo from 'react-native-device-info'
 
 const SavedScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
-  const isTablet = width >= 768
+  const isTablet = DeviceInfo.isTablet()
   const isLandscape = height > width
 
   return (
