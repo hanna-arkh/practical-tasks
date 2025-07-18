@@ -1,18 +1,13 @@
 import { articles } from '../data'
-import {
-  FlatList,
-  View,
-  TouchableOpacity,
-  Text,
-  useWindowDimensions,
-  StyleSheet,
-} from 'react-native'
-import DeviceInfo from 'react-native-device-info'
+import { FlatList, View, TouchableOpacity, Text, useWindowDimensions } from 'react-native'
+import { styles } from '../styles/styles'
+import * as Device from 'expo-device'
 
 const SavedScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
-  const isTablet = DeviceInfo.isTablet()
+  // const isTablet = DeviceInfo.isTablet()
   const isLandscape = height > width
+  const isTablet = Device.deviceType === Device.DeviceType.TABLET
 
   return (
     <View
@@ -37,33 +32,4 @@ const SavedScreen = ({ navigation }) => {
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  portrait: {
-    padding: 10,
-    backgroundColor: '#ffffff',
-  },
-  landscape: {
-    paddingHorizontal: 32,
-    paddingVertical: 16,
-    backgroundColor: '#ffffff',
-    flexDirection: 'row',
-  },
-  phone: {
-    paddingHorizontal: 20,
-  },
-  tablet: {
-    paddingHorizontal: 40,
-  },
-
-  item: {
-    marginBottom: 12,
-    padding: 16,
-    backgroundColor: '#eeeeee',
-    borderRadius: 8,
-    fontSize: 16,
-  },
-})
 export default SavedScreen

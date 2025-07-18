@@ -1,16 +1,18 @@
-import { Text, View, StyleSheet, useWindowDimensions } from 'react-native'
-import DeviceInfo from 'react-native-device-info'
+import { Text, View, useWindowDimensions } from 'react-native'
+import { styles } from '../styles/styles'
+import * as Device from 'expo-device'
 
 const NewsDetails = ({ route }) => {
   const { article } = route.params
   const { width, height } = useWindowDimensions()
-  const isTablet = DeviceInfo.isTablet()
+  // const isTablet = DeviceInfo.isTablet()
   const isLandscape = width > height
+  const isTablet = Device.deviceType === Device.DeviceType.TABLET
 
   return (
     <View
       style={[
-        styles.container,
+        styles.containerTextDetails,
         isLandscape ? styles.landscape : styles.portrait,
         isTablet ? styles.tablet : styles.phone,
       ]}
@@ -23,25 +25,4 @@ const NewsDetails = ({ route }) => {
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 20,
-  },
-  textItem: {
-    paddingBottom: 10,
-  },
-  articleTitle: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    alignSelf: 'center',
-  },
-  content: {
-    fontSize: 20,
-  },
-  info: {
-    alignSelf: 'flex-end',
-  },
-})
 export default NewsDetails
