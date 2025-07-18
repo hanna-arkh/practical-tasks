@@ -1,9 +1,10 @@
 import { Text, View, StyleSheet, useWindowDimensions } from 'react-native'
+import DeviceInfo from 'react-native-device-info'
 
 const NewsDetails = ({ route }) => {
   const { article } = route.params
   const { width, height } = useWindowDimensions()
-  const isTablet = width > 768
+  const isTablet = DeviceInfo.isTablet()
   const isLandscape = width > height
 
   return (
