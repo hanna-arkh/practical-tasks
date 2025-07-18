@@ -5,7 +5,7 @@ import { SCREEN_NAMES } from '../constants/constants'
 const Stack = createStackNavigator()
 
 const Saved = () => (
-  <Stack.Navigator>
+  <Stack.Navigator id={undefined}>
     <Stack.Screen name={SCREEN_NAMES.savedScreen} component={SavedScreen} />
     <Stack.Screen name={SCREEN_NAMES.newsDetails} component={NewsDetails} />
   </Stack.Navigator>

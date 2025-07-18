@@ -6,7 +6,6 @@ import * as Device from 'expo-device'
 const FeedScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
   const isLandscape = height > width
-  // const isTablet = DeviceInfo.isTablet()
   const isTablet = Device.deviceType === Device.DeviceType.TABLET
 
   return (

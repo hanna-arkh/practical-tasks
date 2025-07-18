@@ -5,7 +5,6 @@ import * as Device from 'expo-device'
 
 const SavedScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
-  // const isTablet = DeviceInfo.isTablet()
   const isLandscape = height > width
   const isTablet = Device.deviceType === Device.DeviceType.TABLET
 

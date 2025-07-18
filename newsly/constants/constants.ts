@@ -4,7 +4,7 @@ export const ICON_NAME = {
   bookmarkFocused: 'bookmark',
   bookmarkUnfocused: 'bookmark-outline',
   helpIcon: 'help-circle',
-}
+} as const
 
 export const SCREEN_NAMES = {
   feed: 'Feed',
@@ -12,4 +12,4 @@ export const SCREEN_NAMES = {
   feedScreen: 'Feed Screen',
   newsDetails: 'News Details',
   savedScreen: 'Saved Screen',
-}
+} as const

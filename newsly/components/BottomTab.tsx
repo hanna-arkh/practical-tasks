@@ -4,9 +4,14 @@ import Saved from './Saved'
 import { Ionicons } from '@expo/vector-icons'
 import { ICON_NAME, SCREEN_NAMES } from '../constants/constants'
 
-const Tab = createBottomTabNavigator()
+type BottomTabParamList = {
+  [SCREEN_NAMES.feed]: undefined
+  [SCREEN_NAMES.saved]: undefined
+}
+
+const Tab = createBottomTabNavigator<BottomTabParamList>()
 const BottomTab = () => {
-  const getTabBarIconName = (route, focused) => {
+  const getTabBarIconName = (route, focused: boolean) => {
     switch (route.name) {
       case SCREEN_NAMES.feed:
         return focused ? ICON_NAME.listFocused : ICON_NAME.listUnfocused
@@ -18,6 +23,7 @@ const BottomTab = () => {
   }
   return (
     <Tab.Navigator
+      id={undefined}
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarIcon: ({ color, size, focused }) => {

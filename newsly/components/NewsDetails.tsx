@@ -5,7 +5,6 @@ import * as Device from 'expo-device'
 const NewsDetails = ({ route }) => {
   const { article } = route.params
   const { width, height } = useWindowDimensions()
-  // const isTablet = DeviceInfo.isTablet()
   const isLandscape = width > height
   const isTablet = Device.deviceType === Device.DeviceType.TABLET
 
