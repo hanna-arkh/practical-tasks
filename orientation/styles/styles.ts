@@ -1,5 +1,6 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { TextStyle, ViewStyle } from 'react-native'
 import { COLORS } from '../constants/colors'
+import { StyleSheet } from 'react-native-unistyles'
 
 export const styles = StyleSheet.create({
   container: {
