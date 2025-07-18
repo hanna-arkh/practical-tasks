@@ -1,9 +1,9 @@
 import { View } from 'react-native'
 import { Orientation } from './components/Orientation'
-import { styles } from './styles/styles'
+import { staticStyles } from 'styles/styles'
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={staticStyles.container}>
       <Orientation />
     </View>
   )

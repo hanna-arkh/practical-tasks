@@ -1,23 +1,27 @@
-import { TextStyle, ViewStyle } from 'react-native'
 import { COLORS } from '../constants/colors'
 import { StyleSheet } from 'react-native-unistyles'
+import { ViewStyle, TextStyle } from 'react-native'
+type MyStyles = {
+  container: ViewStyle
+  text: TextStyle
+}
 
-export const styles = StyleSheet.create({
+export const staticStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    alignItems: 'center',
   },
 })
-
-export const textStyle = (isPortrait: boolean): TextStyle => ({
-  fontSize: isPortrait ? 8 : 18,
-})
-
-export const direction = (isPortrait: boolean): ViewStyle => ({
-  flexDirection: isPortrait ? 'column' : 'row',
-})
+export const styles = (isPortrait: boolean): MyStyles =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: COLORS.background,
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: isPortrait ? 'column' : 'row',
+    },
+    text: {
+      alignItems: 'center',
+      fontSize: isPortrait ? 8 : 18,
+    },
+  })
