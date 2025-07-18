@@ -5,7 +5,13 @@ import SearchScreen from './SearchScreen'
 import { Ionicons } from '@expo/vector-icons'
 import { SCREEN_NAMES, ICON_NAMES } from '../constants/constants'
 
-const Tab = createBottomTabNavigator()
+type BottomTabParamList = {
+  [SCREEN_NAMES.feed]: undefined
+  [SCREEN_NAMES.search]: undefined
+  [SCREEN_NAMES.profile]: undefined
+}
+
+const Tab = createBottomTabNavigator<BottomTabParamList>()
 export const BottomTab = () => {
   const getTabBarIconName = (route, focused) => {
     switch (route.name) {
@@ -29,6 +35,7 @@ export const BottomTab = () => {
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'grey',
       })}
+      id={undefined}
     >
       <Tab.Screen name={SCREEN_NAMES.feed} component={FeedStack} options={{ headerShown: false }} />
       <Tab.Screen name={SCREEN_NAMES.search} component={SearchScreen} />

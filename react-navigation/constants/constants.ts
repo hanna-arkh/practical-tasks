@@ -5,7 +5,7 @@ export const SCREEN_NAMES = {
   settings: 'Settings Screen',
   feedScreen: 'Feed Screen',
   postDetail: 'Post Detail',
-}
+} as const
 
 export const ICON_NAMES = {
   homeFocused: 'home',
@@ -15,4 +15,4 @@ export const ICON_NAMES = {
   profileFocused: 'person',
   profileUnfocused: 'person-outline',
   helpIcon: 'help-circle',
-}
+} as const
