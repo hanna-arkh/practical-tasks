@@ -2,12 +2,13 @@ import { articles } from '../data'
 import { FlatList, View, TouchableOpacity, Text, useWindowDimensions } from 'react-native'
 import { styles } from '../styles/styles'
 import * as Device from 'expo-device'
+import { getTheme } from 'expo-settings'
 
 const FeedScreen = ({ navigation }) => {
   const { width, height } = useWindowDimensions()
   const isLandscape = height > width
   const isTablet = Device.deviceType === Device.DeviceType.TABLET
-
+  const theme = getTheme()
   return (
     <View
       style={[
@@ -27,6 +28,7 @@ const FeedScreen = ({ navigation }) => {
           </TouchableOpacity>
         )}
       />
+      <Text>{theme}</Text>
     </View>
   )
 }

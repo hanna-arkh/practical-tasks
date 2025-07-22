@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import ExpoSettings from 'expo-settings'
 
 export const styles = StyleSheet.create({
   container: {

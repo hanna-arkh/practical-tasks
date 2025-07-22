@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "newsly",
-    "slug": "newsly",
+    "name": "expo-settings-example",
+    "slug": "expo-settings-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,23 +13,19 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "expo.modules.settings.example"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "expo.modules.settings.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "7c4e42a8-abc5-4b38-bbc5-944ee97553b6"
-      }
-    },
-    "owner": "annarkh"
+    }
   }
 }
