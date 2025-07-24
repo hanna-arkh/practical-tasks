@@ -13,3 +13,8 @@ export const SCREEN_NAMES = {
   newsDetails: 'News Details',
   savedScreen: 'Saved Screen',
 } as const
+
+export const COLORS = {
+  cardIfLight: '#eeeeee',
+  cardIfDark: '#f2f2f2',
+}

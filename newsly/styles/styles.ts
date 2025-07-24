@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { ViewStyle, TextStyle } from 'react-native'
+import { COLORS } from '../constants/constants'
 type MyStyles = {
   container: ViewStyle
   portrait: ViewStyle
@@ -39,7 +40,7 @@ export const styles = (theme: 'light' | 'dark'): MyStyles =>
     item: {
       marginBottom: 12,
       padding: 16,
-      backgroundColor: theme === 'dark' ? 'black' : '#eeeeee',
+      backgroundColor: theme === 'dark' ? COLORS.cardIfLight : COLORS.cardIfDark,
       borderRadius: 8,
       fontSize: 16,
       color: theme === 'dark' ? 'white' : 'dark',
