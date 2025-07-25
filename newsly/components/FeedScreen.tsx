@@ -1,18 +1,18 @@
 import { articles } from '../data'
-import { FlatList, View, TouchableOpacity, Text, useWindowDimensions } from 'react-native'
+import { FlatList, View, TouchableOpacity, Text } from 'react-native'
 import { styles } from '../styles/styles'
 import * as Device from 'expo-device'
+import useOrientation from '../../orientation/hooks/useOrientation'
 
 const FeedScreen = ({ navigation }) => {
-  const { width, height } = useWindowDimensions()
-  const isLandscape = height > width
+  const { isPortrait } = useOrientation()
   const isTablet = Device.deviceType === Device.DeviceType.TABLET
 
   return (
     <View
       style={[
         styles.container,
-        isLandscape ? styles.landscape : styles.portrait,
+        isPortrait ? styles.portrait : styles.landscape,
         isTablet ? styles.tablet : styles.phone,
       ]}
     >
