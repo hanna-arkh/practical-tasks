@@ -1,0 +1,30 @@
+{
+  "cli": {
+    "version": ">=7.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "EXPO_ENABLE_NEW_ARCHITECTURE": "1"
+      }
+    },
+    "preview": {
+      "env": {
+        "EXPO_ENABLE_NEW_ARCHITECTURE": "1"
+      }
+    },
+    "production": {
+      "env": {
+        "EXPO_ENABLE_NEW_ARCHITECTURE": "1"
+      }
+    }
+  }
+}
