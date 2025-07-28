@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Button, SafeAreaView, Text } from 'react-native'
-import { styles } from './styles/styles'
+import { styles } from '../styles/styles'
 
 export const AsyncTheme = () => {
   const [theme, setTheme] = useState('light')

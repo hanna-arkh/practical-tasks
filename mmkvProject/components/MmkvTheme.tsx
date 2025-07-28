@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMMKVString } from 'react-native-mmkv'
 import { Button, SafeAreaView, Text } from 'react-native'
-import { styles } from './styles/styles'
+import { styles } from '../styles/styles'
 
 export const MmkvTheme = () => {
   const [themeState, setThemeState] = useMMKVString('theme')
