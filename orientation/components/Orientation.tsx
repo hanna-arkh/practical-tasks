@@ -1,6 +1,6 @@
 import { Text, SafeAreaView } from 'react-native'
 import { styles } from '../styles/styles'
-import { useOrientation } from '../hooks/useOrientation'
+import useOrientation from '../hooks/useOrientation'
 
 export const Orientation = () => {
   const { isPortrait } = useOrientation()
