@@ -1,4 +1,6 @@
 {
-  "compilerOptions": {},
+  "compilerOptions": {
+    "types": ["@typescript-eslint/parser"]
+  },
   "extends": "expo/tsconfig.base"
 }

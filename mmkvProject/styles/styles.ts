@@ -1,15 +1,15 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native'
 
 export const styles = (themeState: string) =>
   StyleSheet.create({
     container: {
-      backgroundColor: themeState === "light" ? "white" : "black",
+      backgroundColor: themeState === 'light' ? 'white' : 'black',
       flex: 0.5,
-      justifyContent: "center",
-      alignItems: "center",
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     textStyle: {
-      color: themeState === "light" ? "black" : "white",
+      color: themeState === 'light' ? 'black' : 'white',
       fontSize: 16,
     },
-  });
+  })
