@@ -1,18 +1,14 @@
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import { MmkvTheme } from '../components/MmkvTheme'
 import { AsyncTheme } from '../components/AsyncTheme'
+import { styles } from '../styles/styles'
 
 export default function App() {
+  const s = styles()
   return (
-    <View style={styles.container}>
+    <View style={s.containerApp}>
       <MmkvTheme />
       <AsyncTheme />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
