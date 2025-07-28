@@ -23,7 +23,6 @@ const BottomTab = () => {
   }
   return (
     <Tab.Navigator
-      id={undefined}
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarIcon: ({ color, size, focused }) => {

@@ -11,7 +11,7 @@ type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>()
 
 const Feed = () => (
-  <Stack.Navigator id={undefined}>
+  <Stack.Navigator>
     <Stack.Screen name={SCREEN_NAMES.feedScreen} component={FeedScreen} />
     <Stack.Screen name={SCREEN_NAMES.newsDetails} component={NewsDetails} />
   </Stack.Navigator>
