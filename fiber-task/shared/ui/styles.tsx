@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-
+import { Platform, StatusBar } from 'react-native'
 export const Card = styled.View`
   flex-direction: row;
   align-items: center;
@@ -14,4 +14,7 @@ export const Name = styled.Text`
   font-weight: bold;
   margin-bottom: 4px;
   color: white;
+`
+export const AppContainer = styled.SafeAreaView`
+  padding-top: ${Platform.OS === 'android' ? StatusBar.currentHeight : 0};
 `

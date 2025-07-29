@@ -23,6 +23,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.5",
+    "react-native-nitro-modules": "^0.27.2",
     "react-native-unistyles": "^3.0.5",
     "styled-components": "^6.1.19"
   },
